@@ -1,4 +1,4 @@
-package com.teste;
+package model;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -14,7 +14,7 @@ public class MySQLConnect {
     	
         try {
             Class.forName("com.mysql.cj.jdbc.Driver"); // Carrega o driver JDBC do MySQL
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/lixeiras", "root", "");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/cadastro", "root", "");
         } catch (ClassNotFoundException e) {
         	System.out.println("Erro:" + e.getMessage());       
         }catch(SQLException e) {

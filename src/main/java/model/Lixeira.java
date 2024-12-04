@@ -1,10 +1,11 @@
-package com.teste;
+package model;
 
 public class Lixeira {
 	
+	private int id;
 	private String rua;
 	private	String numero;
-	private float capacidade;
+	private String capacidade;
 	private String finalidade;
 	
 	
@@ -21,10 +22,10 @@ public class Lixeira {
 	public void setNumero(String numero) {
 		this.numero = numero;
 	}
-	public float getCapacidade() {
+	public String getCapacidade() {
 		return capacidade;
 	}
-	public void setCapacidade(float capacidade) {
+	public void setCapacidade(String capacidade) {
 		this.capacidade = capacidade;
 	}
 	public String getFinalidade() {
@@ -32,6 +33,12 @@ public class Lixeira {
 	}
 	public void setFinalidade(String finalidade) {
 		this.finalidade = finalidade;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
 	}
 
 }
