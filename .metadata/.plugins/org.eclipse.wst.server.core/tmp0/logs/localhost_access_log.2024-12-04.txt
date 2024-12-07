@@ -1,0 +1,15 @@
+127.0.0.1 - - [04/Dec/2024:18:05:46 -0300] "GET / HTTP/1.1" 404 763
+0:0:0:0:0:0:0:1 - - [04/Dec/2024:18:05:48 -0300] "GET /Sistema_de_Lixo/index.jsp HTTP/1.1" 200 1291
+0:0:0:0:0:0:0:1 - - [04/Dec/2024:18:05:48 -0300] "GET /Sistema_de_Lixo/estilo.css HTTP/1.1" 200 1571
+0:0:0:0:0:0:0:1 - - [04/Dec/2024:18:05:48 -0300] "GET /Sistema_de_Lixo/Assets/Fundo.png HTTP/1.1" 200 1230762
+0:0:0:0:0:0:0:1 - - [04/Dec/2024:18:05:48 -0300] "GET /favicon.ico HTTP/1.1" 404 774
+0:0:0:0:0:0:0:1 - - [04/Dec/2024:18:06:14 -0300] "GET /Sistema_de_Lixo/index.jsp HTTP/1.1" 200 1876
+0:0:0:0:0:0:0:1 - - [04/Dec/2024:18:06:24 -0300] "GET /Sistema_de_Lixo/index.jsp HTTP/1.1" 200 1877
+0:0:0:0:0:0:0:1 - - [04/Dec/2024:18:06:28 -0300] "GET /Sistema_de_Lixo/index.jsp HTTP/1.1" 200 1877
+0:0:0:0:0:0:0:1 - - [04/Dec/2024:18:06:29 -0300] "GET /Sistema_de_Lixo/index.jsp HTTP/1.1" 200 1877
+0:0:0:0:0:0:0:1 - - [04/Dec/2024:18:06:30 -0300] "GET /Sistema_de_Lixo/index.jsp HTTP/1.1" 200 1877
+0:0:0:0:0:0:0:1 - - [04/Dec/2024:18:06:30 -0300] "GET /Sistema_de_Lixo/index.jsp HTTP/1.1" 200 1877
+0:0:0:0:0:0:0:1 - - [04/Dec/2024:18:06:41 -0300] "GET /Sistema_de_Lixo/index.jsp HTTP/1.1" 200 1876
+0:0:0:0:0:0:0:1 - - [04/Dec/2024:18:07:00 -0300] "POST /Sistema_de_Lixo/validacao.jsp HTTP/1.1" 200 4
+0:0:0:0:0:0:0:1 - - [04/Dec/2024:18:08:56 -0300] "GET /Sistema_de_Lixo/index.jsp HTTP/1.1" 200 1389
+0:0:0:0:0:0:0:1 - - [04/Dec/2024:18:09:30 -0300] "GET /Sistema_de_Lixo/index.jsp HTTP/1.1" 200 1413

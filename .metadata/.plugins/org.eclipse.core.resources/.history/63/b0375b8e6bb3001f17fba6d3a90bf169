@@ -1,0 +1,84 @@
+
+<%@page import="java.util.ArrayList"%>
+<%@page import="controller.LixeirasDAO"%>
+<%@page import="model.Lixeira"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"    %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Coleta de Lixo</title>
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+	
+	 <main>
+	 	
+	 	<h1>  CONTROLE PARA COLETA DE LIXO  </h1>
+	 	<div class="conteudo">
+	 		<form action="validacao.jsp" method="post">
+	 			<h3 style="margin: 5px; text-transform: uppercase;">Insira os dados</h3>
+	 			<label>Rua:</label>
+	 			<input type="text" placeholder="ex: Rua João Alfredo" name="rua">
+	 			<label>Número:</label>
+	 			<input type="text" placeholder="ex: 231" name="numero">
+	 			<label>Capacidade:</label>
+	 			<input type="text" placeholder="em KG ex: 25" name="capacidade">
+	 			<label>Finalidade:</label>
+	 			<input type="text" placeholder="ex: Seco" name="finalidade" >
+	 			<button type="submit">CADASTRAR</button>
+	 			
+			</form>
+			
+			<div class="lista-lixeiras">
+				<table border="1">
+					<thead>
+					   <tr>
+					   	 <th>ID	</th>
+					     <th>Rua</th>
+					     <th>Número</th>
+					     <th>Capacidade</th>
+					     <th>Finalidade</th>
+					   </tr>
+					 </thead>
+					 <tbody>
+				
+			<%  Lixeira lixeira = new Lixeira();
+				LixeirasDAO dao = new LixeirasDAO();
+				
+				ArrayList<Lixeira> listar = dao.getLista();
+				
+				for(int num = 0; num < listar.size(); num++){
+					out.println("<tr>");
+					out.println("<td>"+listar.get(num).getId()+"</td>");
+					out.println("<td>"+listar.get(num).getRua()+"</td>");
+					out.println("<td>"+listar.get(num).getNumero()+"</td>");
+					out.println("<td>"+listar.get(num).getCapacidade()+"</td>");
+					out.println("<td>"+listar.get(num).getFinalidade()+"</td>");
+					out.println("</tr>");
+				}
+				
+					%>
+					 </tbody>
+				</table>
+				
+			</div> 
+			
+			<div class="lista-lixeiras-cadastradas">
+				<form action="executa_deletar.jsp" method = "post">
+					<label>Rua</label> <br>
+					<input type = "number" name = "matricula" value = "<%=request.getParameter("matricula") %>"> <br>
+					<label>Numero</label> <br>
+					<input type = "text" name = "nome" value = "<%=request.getParameter("nome")%>"> <br>
+					<button type = "submit">Deletar</button>
+				</form>
+			</div>
+	 	</div>
+	 	
+	 	
+		
+	 
+	 </main>
+</body>
+</html>

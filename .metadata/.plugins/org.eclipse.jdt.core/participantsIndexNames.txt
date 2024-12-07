@@ -1,0 +1,9 @@
+INDEX VERSION 1.134
+C:\Users\Pablo\Desktop\Projeto Java Qi\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3334321246.index
+\w\src\main\java
+C:\Users\Pablo\Desktop\Projeto Java Qi\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2007836602.index
+\Sistema de Lixo\src\main\java
+C:\Users\Pablo\Desktop\Projeto Java Qi\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2205534783.index
+\Sistema de Lixo\src\main\java
+C:\Users\Pablo\Desktop\Projeto Java Qi\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3547045466.index
+\aula11\src\main\java

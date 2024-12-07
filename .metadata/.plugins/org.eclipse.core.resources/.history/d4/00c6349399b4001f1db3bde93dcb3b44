@@ -1,0 +1,28 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+	
+	<form action="executa-update.jsp" method="post">
+		<h2>Atualização</h2>
+		<label>Id</label>
+		<input type="number" name="id" value="<%=request.getParameter("id")%>">
+		<label>Nome Completo</label>
+		<input type="text" name="rua" value="<%=request.getParameter("rua")%>">
+		<label>Cpf</label>
+		<input type="text" name="numero" value="<%=request.getParameter("numero")%>">
+		<label>E-mail</label>
+		<input type="text" name="capacidade" value="<%=request.getParameter("capacidade")%>">
+		<label>E-mail</label>
+		<input type="text" name="finalidade" value="<%=request.getParameter("finalidade")%>">
+		<button >Atualizar</button>
+	
+	</form>
+</body>
+</html>
