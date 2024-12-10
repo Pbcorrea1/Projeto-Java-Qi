@@ -60,7 +60,7 @@ public class LixeirasDAO {
 	
 	public void atualizar(Lixeira dados) {
 		
-		sql = "UPDATE lixeiras SET rua=?, numero=?, capacidade=?, finalidade=?";
+		sql = "UPDATE lixeiras SET  rua=?, numero=?, capacidade=?, finalidade=? WHERE id=?";
 		
 		
 		try {
@@ -70,6 +70,7 @@ public class LixeirasDAO {
 			ps.setString(2, dados.getNumero());
 			ps.setString(3, dados.getCapacidade());
 			ps.setString(4, dados.getFinalidade());
+			ps.setInt(5, dados.getId());
 			ps.execute();
 			ps.close();
 			
@@ -79,17 +80,18 @@ public class LixeirasDAO {
 		
 	}
 	
-	public void deletar(int valor) {
-		sql = "DELETE FROM * lixeiras WHERE id="+ valor;
+	public void deletar(String rua, String numero) {
+		 sql = "DELETE FROM lixeiras WHERE 	rua = '" + rua + "' AND numero = '" + numero + "'";
+
 		
 		try {
 			conn = MySQLConnect.getConnection();
-			ps = conn.prepareStatement(sql);
+			st = conn.prepareStatement(sql);
 			st.execute(sql);
 			st.close();
 			
 		} catch (SQLException e) {
-			System.out.println("Erro ao deletar");
+			System.out.println("Erro ao deletar" + e);
 			
 		}
 		

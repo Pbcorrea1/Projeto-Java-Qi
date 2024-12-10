@@ -15,4 +15,5 @@
  	lixeira.setCapacidade(capacidade);
  	lixeira.setFinalidade(finalidade);
 	dao.inserir(lixeira);
+	response.sendRedirect("index.jsp");
 %>

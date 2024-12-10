@@ -20,9 +20,9 @@
 	 		<form action="validacao.jsp" method="post">
 	 			<h3 style="margin: 5px; text-transform: uppercase;">Insira os dados</h3>
 	 			<label>Rua:</label>
-	 			<input type="text" placeholder="ex: Rua João Alfredo" name="rua">
+	 			<input style="" type="text" placeholder="ex: Rua João Alfredo" name="rua" >
 	 			<label>Número:</label>
-	 			<input type="text" placeholder="ex: 231" name="numero">
+	 			<input type="text" placeholder="ex: 231" name="numero" >
 	 			<label>Capacidade:</label>
 	 			<input type="text" placeholder="em KG ex: 25" name="capacidade">
 	 			<label>Finalidade:</label>
@@ -56,6 +56,7 @@
 					out.println("<td>"+listar.get(num).getNumero()+"</td>");
 					out.println("<td>"+listar.get(num).getCapacidade()+"</td>");
 					out.println("<td>"+listar.get(num).getFinalidade()+"</td>");
+					out.println("<td style='border: none;'><a style='text-decoration: none; color: black;' href='update.jsp?id="+listar.get(num).getId()+"&rua="+listar.get(num).getRua()+"&numero="+listar.get(num).getNumero()+"&capacidade="+listar.get(num).getCapacidade()+"&finalidade="+listar.get(num).getFinalidade()+"'>Edit</a></td>");
 					out.println("</tr>");
 				}
 				
@@ -65,9 +66,16 @@
 				
 			</div> 
 			
-			<div class="lista-lixeiras-cadastradas">
-				<h1> Lista 2</h1>
-			</div>
+
+			<form action="deletar.jsp" method = "post" style="justify-content: space-between;">
+				<h3 style="margin: 5px; text-transform: uppercase;">Excluir Lixeira</h3>
+				<label>Rua</label> <br>
+				<input type ="text" placeholder="Insira a rua" name="rua" value ?= "<%=request.getParameter("rua") %>"> <br>
+				<label>Numero</label> <br>
+				<input type = "text" placeholder="Insira o numero" name="numero" value ?= "<%=request.getParameter("numero")%>"> <br>
+				<button type = "submit">Deletar</button>
+			</form>
+			
 	 	</div>
 	 	
 	 	
